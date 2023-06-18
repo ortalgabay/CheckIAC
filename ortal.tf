@@ -1,5 +1,8 @@
 resource "aws_s3_bucket" "bad_bucket" {
   bucket = "bad_bucket"
+  tags = {
+    yor_trace = "641aa7ea-aced-4eda-abd6-a7f249010b7a"
+  }
 }
 resource "aws_instance" "web_host" {
   # ec2 have plain text secrets in user data
